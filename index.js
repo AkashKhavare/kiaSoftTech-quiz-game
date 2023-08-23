@@ -10,9 +10,6 @@ var choice2=document.getElementById("btn-2");
 var choice3=document.getElementById("btn-3");
 var choice4=document.getElementById("btn-4");
 
-//if Start  byn clicked
-/* timer starts and I am presented with a question */
-// getting questions and answers from array
 startBtn.addEventListener("click",function startGame(){
     document.getElementById("homepage").setAttribute("class","hidden-homepage") //hide the homepage
     document.getElementById("quiz-text").setAttribute("id","show-quiz")//show the questions
@@ -23,11 +20,7 @@ startBtn.addEventListener("click",function startGame(){
     choice4.textContent= questionBox[currentQuestion].answers[3]
     startTimer() 
     timerCount=60; 
-  })
-
-// WHEN I answer a question,presented with another question
-//run next Question when clicked any button
-//if userChoice=correctAnswer then append right ,if not wrong
+  
 choice1.addEventListener("click",function nextQuestion(){
   if(questionBox[currentQuestion].answers[0]==questionBox[currentQuestion].correctAnswer)
   document.getElementById("check-answer").append('Last answer : Correct !')
@@ -103,15 +96,7 @@ timerText.textContent = ("Time : "+ timerCount)
 
 } ,1000); 
 }
-/*WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over*/
-// THEN I can save my initials and score
-// 
-// if(currentQuestion===3){
-//   document.getElementsByClassName("btn").addEventListener("click",
+
   function finishGame(){
     currentQuestion=0
     console.log("You finished!!")
