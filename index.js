@@ -1,4 +1,4 @@
-// Getting all required elements
+
 var startBtn=document.getElementById("start-btn");
 var timerText =document.getElementById("timer");
 var questionText=document.getElementById("question-text")
